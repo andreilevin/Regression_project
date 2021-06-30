@@ -1,0 +1,3 @@
+# Andrei's Regression Project Proposal
+
+I am planning to scrape basketball-reference.com for NBA player information and stats (height, age, points, rebounds, field goal percentage, games played, etc.) and see if I can use that to predict their salary.   This could help teams assess whether a particular player in the league is overvalued or undervalued.    For an MVP, I would analyze a limited set of features for one specific team (for one or multiple years).
