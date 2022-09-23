@@ -1,25 +1,16 @@
 # NBA Free Agent Salary Predictor
 
-In this project, we predict the salary of NBA free fgents based on a regression model that takes their previous year's salary and stats as features.
+**Note**:  *This is a very early version of what later became the far more sophisticated [Hoops Hero](https://github.com/andreilevin/HoopsHero) project.  It was also my foray into machine learning (in this case, linear regression).*  
 
-## Design and Data
+We can all go online to look up our favorite NBA player's current salary, but how do we tell if this salary matches up with his actual market value?  In other words, if this player suddenly became a free agent, how much would a team likely pay him compared to what he's making now?  To answer this question using machine learning, I scraped the last 5 years of NBA free agent data using `beautifulsoup` and trained a linear regression model in `scikit-learn` to predict the contract each free agent signed, based on their previous-season data.  Using this model, I was able to predict a market value for current NBA players based on their season stats so far. 
 
-We scraped the last four years of NBA free agent statistics  from http://www.basketball-reference.com and salary data from http://www.hoopshype.com.  Extensive cleaning was performed both before and after the various datasets were combined
+### Project Presentation [Slides](https://github.com/andreilevin/Regression_project/blob/main/AndreiPresentation.pdf) | [Video](https://youtu.be/1BuwIjbGifg):
 
-## Algorithms
-
-We used ordinary linear regression, feature engineering (including polynomial and fractional features), cross-validation, regularization,  and LASSO regression.
+[![Watch the video:](https://raw.githubusercontent.com/andreilevin/Regression_project/main/youtube_screen.jpg)](https://youtu.be/yqBPyubJo38)
 
 ## Tools
 
 * Beautifulsoup for web scraping
 * Pandas for data cleaning, filtering and aggregation
-* Statsmodels and scikitlearn for EDA and regression modelling
+* Statsmodels and scikitlearn for regression modelling
 * Matplotlib and Seaborn for plotting 
-
-## Communication
-
-Our best fit was achieved by Ordinary Least Squares, with an average R-squared of 0.74 on the train set and 0.66 on the Test set.  On the test data, mean absolute error was $3.71 million and root mean square error of of $5.21 million.  A scatter plot of predicted vs actual salaries in the test set is show below:
-
-<img  src="https://raw.githubusercontent.com/andreilevin/Regression_project/main/fig_ols.png" 
-      title="results_unfiltered" width="400"/>
